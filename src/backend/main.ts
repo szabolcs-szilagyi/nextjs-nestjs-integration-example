@@ -16,7 +16,7 @@ export module Backend {
         { bodyParser: false }
       );
       app.setGlobalPrefix("api");
-  
+
       await app.init();
     }
 
