@@ -8,6 +8,21 @@ function useRandomNumber() {
       fetch("/api/randomNumber")
         .then(response => response.text())
         .then(text => setNumber(+text));
+      fetch("/api/randomNumber")
+        .then(response => response.text())
+        .then(text => setNumber(+text));
+      fetch("/api/randomNumber")
+        .then(response => response.text())
+        .then(text => setNumber(+text));
+      fetch("/api/randomNumber")
+        .then(response => response.text())
+        .then(text => setNumber(+text));
+      fetch("/api/randomNumber")
+        .then(response => response.text())
+        .then(text => setNumber(+text));
+      fetch("/api/randomNumber")
+        .then(response => response.text())
+        .then(text => setNumber(+text));
     },
     []
   );
