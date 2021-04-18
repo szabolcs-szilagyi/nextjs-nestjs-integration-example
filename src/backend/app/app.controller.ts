@@ -1,4 +1,5 @@
-import { Controller, Get, Param } from "@nestjs/common";
+import { Controller, Get, Param, Query } from "@nestjs/common";
+import { NumberNameDto } from "./dto/number-name.dto";
 
 @Controller("randomNumber")
 export class AppController {
@@ -6,6 +7,13 @@ export class AppController {
   randomNumber() {
     return Math.random() * 100;
   }
+
+    @Get('pipe-test')
+    pipeTest(
+        @Query() numberNameDto: NumberNameDto,
+    ) {
+        return { numberNameDto };
+    }
 
   @Get("/:number")
   async findOne(@Param("number") param: string) {

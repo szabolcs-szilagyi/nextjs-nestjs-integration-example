@@ -3,7 +3,7 @@ import { NestFactory } from "@nestjs/core";
 import { AppModule } from "./app/app.module";
 import * as http from "http";
 import { NextApiHandler } from "next";
-import { INestApplication } from "@nestjs/common";
+import { INestApplication, ValidationPipe } from "@nestjs/common";
 
 export module Backend {
 
@@ -16,7 +16,8 @@ export module Backend {
         { bodyParser: false }
       );
       app.setGlobalPrefix("api");
-  
+      app.useGlobalPipes(new ValidationPipe())
+
       await app.init();
     }
 
