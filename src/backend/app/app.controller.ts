@@ -8,12 +8,12 @@ export class AppController {
     return Math.random() * 100;
   }
 
-    @Get('pipe-test')
-    pipeTest(
-        @Query() numberNameDto: NumberNameDto,
-    ) {
-        return { numberNameDto };
-    }
+  @Get('pipe-test')
+  pipeTest(
+    @Query() numberNameDto: NumberNameDto,
+  ) {
+    return { numberNameDto };
+  }
 
   @Get("/:number")
   async findOne(@Param("number") param: string) {
